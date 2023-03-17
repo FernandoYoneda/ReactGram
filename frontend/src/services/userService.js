@@ -44,7 +44,6 @@ const getUserDetails = async (id) => {
     console.log(error);
   }
 };
-
 const userService = {
   profile,
   updateProfile,

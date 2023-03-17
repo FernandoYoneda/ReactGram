@@ -11,6 +11,7 @@ import Home from "./pages/Home/Home";
 import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
 import EditProfile from "./pages/EditProfile/EditProfile";
+import Profile from "./pages/profile/Profile";
 
 // components
 import NavBar from "./components/NavBar";
@@ -38,6 +39,10 @@ function App() {
             <Route
               path="/profile"
               element={auth ? <EditProfile /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/users/:id"
+              element={auth ? <Profile /> : <Navigate to="/login" />}
             />
             <Route
               path="/login"
